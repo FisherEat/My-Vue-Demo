@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <div>
+      <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
       <li>
@@ -19,13 +20,14 @@
         <a href="https://twitter.com/vuejs"
           target="_blank">Twitter</a>
       </li>
-      <br>
       <li>
         <a href="http://vuejs-templates.github.io/webpack/"
           target="_blank">Docs for This Template</a></li>
     </ul>
+    </div>
     <!-- 生态 -->
-    <h2>Ecosystem</h2>
+    <div>
+      <h2>Ecosystem</h2>
     <ul>
       <li>
         <a href="http://router.vuejs.org/"
@@ -44,6 +46,8 @@
           target="_blank">awesome-vue</a>
       </li>
     </ul>
+    </div>
+    <!-- router -->
     <div>
       <button v-on:click="routeToTest">前往</button>
     </div>
@@ -123,6 +127,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+hello {
+  display: flex;
+}
 h1, h2 {
   font-weight: normal;
 }

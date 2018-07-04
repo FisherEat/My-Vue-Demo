@@ -1,13 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import WelcomePage from '@/components/Welcome'
+import HomePage from '@/components/Home'
 import Test from '@/components/Test'
 import Message from '@/components/Message'
-
-// import { resolve } from 'url'
-
-// const Test = resolve => require(['../components/Test.vue'], resolve)
-// const HelloWorld = resolve => require(['../components/HelloWorld.vue'], resolve)
 
 Vue.use(Router)
 
@@ -17,9 +13,14 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
+      path: '/welcome',
+      name: 'WelcomePage',
+      component: WelcomePage
+    },
+    {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Home',
+      component: HomePage
     },
     {
       path: '/test',
